@@ -1,0 +1,226 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mineral\n"
+"POT-Creation-Date: 2013-07-14 16:05+1000\n"
+"PO-Revision-Date: 2013-07-14 16:07+1000\n"
+"Last-Translator: \n"
+"Language-Team: Pexeto\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+
+
+#: 404.php:11
+#: header.php:15
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:18
+msgid "The requested page has not been found"
+msgstr ""
+
+#: archive.php:44
+#: index.php:34
+#: template-blog.php:70
+msgid "No posts available"
+msgstr ""
+
+#: comments.php:25
+msgid "No comments"
+msgstr ""
+
+#: comments.php:25
+msgid "One comment"
+msgstr ""
+
+#: comments.php:25
+#: includes/post-template.php:153
+msgid "comments"
+msgstr ""
+
+#: comments.php:44
+#: functions/shortcodes.php:426
+#: includes/contact-form.php:9
+msgid "Name"
+msgstr ""
+
+#: comments.php:46
+msgid "E-mail"
+msgstr ""
+
+#: comments.php:48
+msgid "Website"
+msgstr ""
+
+#: comments.php:53
+msgid "Your comment"
+msgstr ""
+
+#: comments.php:56
+msgid "Leave a comment"
+msgstr ""
+
+#: comments.php:57
+msgid "Submit comment"
+msgstr ""
+
+#: comments.php:59
+msgid "Leave a reply to"
+msgstr ""
+
+#: comments.php:60
+msgid "Cancel reply"
+msgstr ""
+
+#: footer.php:14
+msgid "Call to action section title"
+msgstr ""
+
+#: footer.php:15
+msgid "Call to action section description"
+msgstr ""
+
+#: footer.php:16
+msgid "Call to action button text"
+msgstr ""
+
+#: footer.php:59
+msgid "Copyright"
+msgstr ""
+
+#: header.php:9
+msgid "Category"
+msgstr ""
+
+#: header.php:11
+msgid "Tag"
+msgstr ""
+
+#: header.php:13
+msgid "Search results"
+msgstr ""
+
+#: header.php:93
+msgid "Menu"
+msgstr ""
+
+#: search.php:9
+msgid "Search results for"
+msgstr ""
+
+#: search.php:32
+msgid "No results found"
+msgstr ""
+
+#: searchform.php:8
+msgid "Search"
+msgstr ""
+
+#: template-archive.php:24
+msgid "Categories"
+msgstr ""
+
+#: template-archive.php:28
+msgid "Monthly archive"
+msgstr ""
+
+#: template-archive.php:32
+msgid "Post List"
+msgstr ""
+
+#: template-portfolio-gallery.php:50
+msgid "All"
+msgstr ""
+
+#: functions/comments.php:41
+msgid "Reply"
+msgstr ""
+
+#: functions/gallery.php:259
+msgid "Prev Project"
+msgstr ""
+
+#: functions/gallery.php:261
+msgid "Back to gallery"
+msgstr ""
+
+#: functions/gallery.php:267
+msgid "Next project"
+msgstr ""
+
+#: functions/gallery.php:324
+msgid "Related Projects"
+msgstr ""
+
+#: functions/html-builders.php:73
+msgid "Share"
+msgstr ""
+
+#: functions/scripts-and-styles.php:223
+msgid "The text you have entered did not match the text on the image. Please try again."
+msgstr ""
+
+#: functions/scripts-and-styles.php:224
+msgid "An error occurred. Message not sent."
+msgstr ""
+
+#: functions/scripts-and-styles.php:225
+msgid "Please complete all the fields correctly"
+msgstr ""
+
+#: functions/scripts-and-styles.php:226
+msgid "Message sent"
+msgstr ""
+
+#: functions/shortcodes.php:428
+msgid "Your e-mail"
+msgstr ""
+
+#: functions/shortcodes.php:433
+#: includes/contact-form.php:57
+msgid "Send"
+msgstr ""
+
+#: includes/contact-form.php:17
+msgid "E-mail address"
+msgstr ""
+
+#: includes/contact-form.php:25
+msgid "Your message"
+msgstr ""
+
+#: includes/contact-form.php:38
+msgid "Insert the text from the image"
+msgstr ""
+
+#: includes/contact-form.php:43
+msgid "Get a new challenge"
+msgstr ""
+
+#: includes/post-pagination.php:9
+msgid "Previous"
+msgstr ""
+
+#: includes/post-pagination.php:10
+msgid "Next"
+msgstr ""
+
+#: includes/post-template.php:100
+#: includes/post-template.php:110
+msgid "Read More"
+msgstr ""
+
+#: includes/post-template.php:133
+msgid "in"
+msgstr ""
+
+#: includes/post-template.php:139
+msgid "by"
+msgstr ""
+
+#: includes/post-template.php:166
+msgid "Post tags"
+msgstr ""
