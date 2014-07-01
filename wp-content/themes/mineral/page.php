@@ -17,6 +17,7 @@ if ( have_posts() ) {
 		locate_template( array( 'includes/html-before-content.php' ), true, true );
 
 		//display the page content
+		var_dump("testing");
 		the_content();
 		wp_link_pages();
 
