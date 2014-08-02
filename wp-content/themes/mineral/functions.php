@@ -73,5 +73,190 @@ require PEXETO_LIB_PATH.'init.php';  //init file of the Pexeto library
 require PEXETO_FUNCTIONS_PATH.'init.php';  //init file of the theme functions
 
 
+/******************************************************************************\
+	Custom functions
+\******************************************************************************/
 
+/**
+ * Remove menu items for non-admin
+ *
+ */
+function edit_admin_menus() {
+    global $menu;
+    $restricted = array(__('Dashboard'), __('Posts'));
+    end ($menu);
+    while (prev($menu)){
+        $value = explode(' ',$menu[key($menu)][0]);
+        if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
+    }
+
+    // remove some more when not admin
+    if (!current_user_can('manage_options')){
+    	remove_menu_page('edit-comments.php');
+    	remove_menu_page('tools.php');
+        remove_menu_page('wpseo_dashboard');
+    	remove_menu_page('wpcf7');
+    }
+}
+add_action( 'admin_menu', 'edit_admin_menus' );
+
+/**
+ * Redirect to pages
+ */
+function login_redirect( $redirect_to, $request, $user ){
+    return (is_array($user->roles) && in_array('administrator', $user->roles)) ? admin_url() : 'wp-admin/edit.php?post_type=page';
+	// return 'wp-admin/edit.php?post_type=page';
+}
+add_filter( 'login_redirect', 'login_redirect', 10, 3 );
+
+/**
+ * Remove elements for non-admin from general view
+ */
+function remove_items() {
+    $screen = get_current_screen();
+    global $current_screen;
+    // only administrator gets the quick edit
+    if( ! current_user_can('manage_options' )){
+        ?>
+        <script type="text/javascript">
+	        // remove quick edit for pages
+	        window.onload = function (){
+	            <?php if ($_GET['post_type'] == 'page' || $_GET['post_type'] == 'gallery' || $_GET['post_type'] == 'vacatures') { ?>
+	                // remove input fields from quick edit
+	                var editinline = document.getElementsByClassName('inline');
+	                if ( editinline != null ) {
+	                    for (var i = editinline.length - 1; i >= 0; i--) {
+	                        editinline[i].parentNode.removeChild(editinline[i]);
+	                    };
+	                }
+
+                    <?php if ($_GET['post_type'] == 'page') { ?>
+                        var editinline = document.getElementsByClassName('trash');
+                        if ( editinline != null ) {
+                            for (var i = editinline.length - 1; i >= 0; i--) {
+                                editinline[i].parentNode.removeChild(editinline[i]);
+                            };
+                        }
+
+                        var add_new_h2 = document.getElementsByClassName('add-new-h2');
+                        if ( add_new_h2 != null ) {
+                            for (var i = add_new_h2.length - 1; i >= 0; i--) {
+                                add_new_h2[i].parentNode.removeChild(add_new_h2[i]);
+                            };
+                        }
+
+                        var bulkactions = document.getElementsByClassName('bulkactions');
+                        if ( bulkactions != null ) {
+                            for (var i = bulkactions.length - 1; i >= 0; i--) {
+                                bulkactions[i].parentNode.removeChild(bulkactions[i]);
+                            };
+                        }
+                    <?php } ?>
+	            <?php } ?>
+	        }
+        </script>
+        <?php
+    }
+}
+add_action( 'admin_head-edit.php', 'remove_items' );
+
+/*
+* Remove input fields on pages
+*/
+function remove_my_page_metaboxes() {
+    global $current_screen;
+    global $typenow;
+
+    if ( ! current_user_can('manage_options')){
+
+        if (isset($_GET['post'])) {
+        	$type = (get_post_type($_GET['post']));
+        }
+        else {
+            $type = 'none';
+        }
+
+        if ($typenow == 'page'){ 
+            ?>
+            <script type="text/javascript">
+                window.onload = function() {
+                    // inladen elementen om te verwijderen
+                    var homepage_metabox = document.getElementById('homepage_metabox');
+                    var page_metabox = document.getElementById('page_metabox');
+                    var pageparentdiv = document.getElementById('pageparentdiv');
+                    var add_new_h2 = document.getElementsByClassName('add-new-h2');
+                    var postimagediv = document.getElementById('postimagediv');
+                    var contact_page_metabox = document.getElementById('contact_page_metabox');
+
+                    // elementen verwijderen
+                    if ( homepage_metabox !=null ){ homepage_metabox.remove(); }
+                    if ( page_metabox != null ){ page_metabox.remove(); }
+                    if ( pageparentdiv != null ){ pageparentdiv.remove(); }
+                    if ( postimagediv != null ){ postimagediv.remove() }
+                    if ( contact_page_metabox != null ){ contact_page_metabox.remove(); }
+
+                    if ( add_new_h2 != null ) {
+                        for (var i = add_new_h2.length - 1; i >= 0; i--) {
+                            add_new_h2[i].remove();
+                        };
+                    }
+
+                    // set title readonly
+                    var title = document.getElementById('title');
+                    title.setAttribute('readonly', 'readonly');
+                }
+            </script>
+        <?php }
+        if (is_edit_page() && ($type == 'page' || $type == 'none')){
+            ?>
+            <script type="text/javascript">
+                window.onload = function() {
+                    // inladen elementen om te verwijderen
+                    var commentstatusdiv = document.getElementById('commentstatusdiv');
+                    var commentsdiv = document.getElementById('commentsdiv');
+                    var pageparentdiv = document.getElementById('pageparentdiv');
+                    var add_new_h2 = document.getElementsByClassName('add-new-h2');
+                    // elementen verwijderen
+                    if ( commentstatusdiv !=null ){ commentstatusdiv.remove(); }
+                    if ( commentsdiv !=null ){ commentsdiv.remove(); }
+                    if ( pageparentdiv !=null ){ pageparentdiv.remove(); }
+
+                    if ( add_new_h2 != null ) {
+                        for (var i = add_new_h2.length - 1; i >= 0; i--) {
+                            add_new_h2[i].remove();
+                        };
+                    }
+                }
+            </script>
+      <?php }
+    }
+}
+add_action('admin_menu','remove_my_page_metaboxes');
+
+function is_edit_page($new_edit = null){
+    global $pagenow;
+    //make sure we are on the backend
+    if (!is_admin()) return false;
+
+
+    if($new_edit == "edit")
+        return in_array( $pagenow, array( 'post.php',  ) );
+    elseif($new_edit == "new") //check for new post page
+        return in_array( $pagenow, array( 'post-new.php' ) );
+    else //check for either new or edit
+        return in_array( $pagenow, array( 'post.php', 'post-new.php' ) );
+}
+
+/**
+* Remove media settings for gallery
+*/
+add_action('print_media_templates', function(){
+
+    print '
+        <style type="text/css">
+            .gallery-settings {
+            display:none !important;
+            }
+        </style>';
+});
 ?>
