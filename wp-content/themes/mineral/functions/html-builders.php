@@ -78,7 +78,7 @@ if ( !function_exists( 'pexeto_get_share_btns_html' ) ) {
 		$permalink = get_permalink( $post_id );
 		$title = get_the_title( $post_id );
 		$html = '<div class="social-share"><div class="share-title">'
-			.__( 'Share', 'pexeto' ).'</div><ul>';
+			.__( 'Deel', 'pexeto' ).'</div><ul>';
 
 		foreach ( $display_buttons as $btn ) {
 			switch ( $btn ) {

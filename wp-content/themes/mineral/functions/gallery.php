@@ -256,7 +256,7 @@ if(!function_exists('pexeto_get_portfolio_slider_item_navigation')){
 		if ( ( isset( $_GET['prev'] ) && ( $_GET['prev']==='false' || $_GET['prev']==false ) ) ) {
 			$p_dis_class=' disabled';
 		}
-		$prev_text = str_replace( ' ', '<br/>', __( 'Prev Project', 'pexeto' ) );
+		$prev_text = str_replace( ' ', '<br/>', __( 'Vorige galerij', 'pexeto' ) );
 		$html.='<div class="ps-back"><a href="#" rel="back" class="ps-back-link">'.
 			'<span class="ps-back-icon icon-arrow-left-2"></span> <span class="ps-icon"></span> <span class="ps-back-text">'.__( 'Terug naar overzicht', 'pexeto' ).'</span></a></div>';
 		$html.='<div class="ps-nav-wrapper"><a href="#" rel="prev" class="ps-prev-project-link'.$p_dis_class
@@ -264,7 +264,7 @@ if(!function_exists('pexeto_get_portfolio_slider_item_navigation')){
 		if ( ( isset( $_GET['next'] ) && ( $_GET['next']==='false' || $_GET['next']==false ) ) ) {
 			$n_dis_class=' disabled';
 		}
-		$next_text = str_replace( ' ', '<br/>', __( 'Next project', 'pexeto' ) );
+		$next_text = str_replace( ' ', '<br/>', __( 'Volgende galerij', 'pexeto' ) );
 		$html.='<a href="#" rel="next" class="ps-next-project-link'.$n_dis_class.'"><span class="ps-icon icon-arrow-right-2"></span><span>'.$next_text.'</span></a></div>';
 		$html.='<div class="clear"></div></div>';
 
