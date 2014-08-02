@@ -321,7 +321,7 @@ if ( !function_exists( 'pexeto_get_portfolio_carousel_html' ) ) {
 		}
 
 		$posts=get_posts( $args );
-		$html = pexeto_build_portfolio_carousel_html( $posts, __( 'Related Projects', 'pexeto' ) );
+		$html = pexeto_build_portfolio_carousel_html( $posts, __( 'Gerelateerde projecten', 'pexeto' ) );
 		return $html;
 	}
 }
