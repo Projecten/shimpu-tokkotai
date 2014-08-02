@@ -79,7 +79,8 @@ if ( !function_exists( 'pexeto_add_admin_bar_options_link' ) ) {
 	 * Adds a link to the Theme Options page in the admin bar.
 	 */
 	function pexeto_add_admin_bar_options_link() {
-		if ( current_user_can( 'edit_theme_options' ) ) {
+		// if ( current_user_can( 'edit_theme_options' ) ) {
+		if ( current_user_can( 'editor' ) ) {
 			global $wp_admin_bar;
 			$wp_admin_bar->add_menu( array( 'id' => 'pexeto_options',
 					'title' =>PEXETO_THEMENAME.' Options',
