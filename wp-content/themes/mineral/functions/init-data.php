@@ -80,7 +80,7 @@ if ( !function_exists( 'pexeto_add_admin_bar_options_link' ) ) {
 	 */
 	function pexeto_add_admin_bar_options_link() {
 		// if ( current_user_can( 'edit_theme_options' ) ) {
-		if ( current_user_can( 'editor' ) ) {
+		if ( current_user_can( 'edit_others_pages' ) ) {
 			global $wp_admin_bar;
 			$wp_admin_bar->add_menu( array( 'id' => 'pexeto_options',
 					'title' =>PEXETO_THEMENAME.' Options',
