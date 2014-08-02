@@ -50,7 +50,7 @@ if(have_posts()){
 				<?php $cclass = $cat=='-1'?'class="'.$current_class.'"':''; ?>
 				<li>
 					<a rel="-1" href="<?php echo $page_url; ?>" <?php echo $cclass; ?>>
-						<?php _e( 'All', 'pexeto' ); ?>
+						<?php _e( 'Alle', 'pexeto' ); ?>
 					</a>
 				</li>
 				<?php

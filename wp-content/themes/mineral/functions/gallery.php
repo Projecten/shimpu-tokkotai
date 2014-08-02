@@ -258,7 +258,7 @@ if(!function_exists('pexeto_get_portfolio_slider_item_navigation')){
 		}
 		$prev_text = str_replace( ' ', '<br/>', __( 'Prev Project', 'pexeto' ) );
 		$html.='<div class="ps-back"><a href="#" rel="back" class="ps-back-link">'.
-			'<span class="ps-back-icon icon-arrow-left-2"></span> <span class="ps-icon"></span> <span class="ps-back-text">'.__( 'Back to gallery', 'pexeto' ).'</span></a></div>';
+			'<span class="ps-back-icon icon-arrow-left-2"></span> <span class="ps-icon"></span> <span class="ps-back-text">'.__( 'Terug naar overzicht', 'pexeto' ).'</span></a></div>';
 		$html.='<div class="ps-nav-wrapper"><a href="#" rel="prev" class="ps-prev-project-link'.$p_dis_class
 			.'"><span class="ps-icon icon-arrow-left-2"></span><span>'.$prev_text.'</span></a>';
 		if ( ( isset( $_GET['next'] ) && ( $_GET['next']==='false' || $_GET['next']==false ) ) ) {
@@ -321,7 +321,7 @@ if ( !function_exists( 'pexeto_get_portfolio_carousel_html' ) ) {
 		}
 
 		$posts=get_posts( $args );
-		$html = pexeto_build_portfolio_carousel_html( $posts, __( 'Gerelateerde projecten', 'pexeto' ) );
+		$html = pexeto_build_portfolio_carousel_html( $posts, __( 'Gerelateerde galerijen', 'pexeto' ) );
 		return $html;
 	}
 }
