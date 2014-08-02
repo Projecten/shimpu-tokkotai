@@ -72,7 +72,8 @@ class PexetoOptions extends PexetoDataFields {
 		}elseif ( !wp_verify_nonce( $_POST['pexeto-theme-options'], 'pexeto-theme-update-options' ) ) {
 			$res["success"] = false;
 			$res["message"] = $this->invalid_nonce_error;
-		}elseif ( !current_user_can( 'edit_theme_options' ) ) {
+		// }elseif ( !current_user_can( 'edit_theme_options' ) ) {
+		}elseif ( !current_user_can( 'edit_others_pages' ) ) {
 			$res["success"] = false;
 			$res["message"] = $this->user_cap_error;
 		}else {
