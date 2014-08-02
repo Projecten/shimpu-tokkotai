@@ -68,7 +68,8 @@ if ( !function_exists( 'pexeto_add_options_menu' ) ) {
 			PEXETO_OPTIONS_PAGE,
 			PEXETO_THEMENAME.' Options',
 			PEXETO_THEMENAME.' Options',
-			'edit_theme_options',
+			// 'edit_theme_options',
+			'edit_others_pages',
 			PEXETO_OPTIONS_PAGE,
 			array( $pexeto->options_manager, 'print_options_page' ) );
 	}
@@ -80,7 +81,8 @@ if ( !function_exists( 'pexeto_add_admin_bar_options_link' ) ) {
 	 * Adds a link to the Theme Options page in the admin bar.
 	 */
 	function pexeto_add_admin_bar_options_link() {
-		if ( current_user_can( 'edit_theme_options' ) ) {
+		// if ( current_user_can( 'edit_theme_options' ) ) {
+		if ( current_user_can( 'edit_others_pages' ) ) {
 			global $wp_admin_bar;
 			$wp_admin_bar->add_menu( array( 'id' => 'pexeto_options',
 					'title' =>PEXETO_THEMENAME.' Options',
