@@ -58,7 +58,8 @@ if ( !function_exists( 'pexeto_add_options_menu' ) ) {
 		add_menu_page(
 			PEXETO_THEMENAME,
 			PEXETO_THEMENAME,
-			'edit_theme_options',
+			// 'edit_theme_options',
+			'edit_others_pages',
 			PEXETO_OPTIONS_PAGE,
 			array( $pexeto->options_manager, 'print_options_page' ),
 			PEXETO_LIB_URL.'images/pex_icon.png' );
@@ -82,7 +83,7 @@ if ( !function_exists( 'pexeto_add_admin_bar_options_link' ) ) {
 		if ( current_user_can( 'edit_theme_options' ) ) {
 			global $wp_admin_bar;
 			$wp_admin_bar->add_menu( array( 'id' => 'pexeto_options',
-					'title' =>PEXETO_THEMENAME.' Options Test',
+					'title' =>PEXETO_THEMENAME.' Options',
 					'href' => admin_url( '?page=pexeto_options' ) ) );
 		}
 	}
