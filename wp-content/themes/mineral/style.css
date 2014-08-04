@@ -230,7 +230,8 @@ img {
   height: auto;
 }
 a {
-  color: #383838;
+  /*color: #383838;*/
+  color: #ed8137;
   text-decoration: none;
 }
 a:focus {
