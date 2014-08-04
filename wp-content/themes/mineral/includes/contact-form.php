@@ -6,7 +6,7 @@
 	<div class="info-box sent-message"></div>
 	<div class="contact-form-input contact-input-wrapper">
 		<label class="contact-label">
-			<?php _e( 'Name', 'pexeto' );;?>
+			<?php _e( 'Naam', 'pexeto' );;?>
 			<span class="mandatory">*</span>
 		</label>
 		<input type="text" name="name" class="required" />
@@ -14,7 +14,7 @@
 
 	<div class="contact-form-input contact-input-wrapper">
 		<label class="contact-label">
-			<?php _e( 'E-mail address', 'pexeto' );?>
+			<?php _e( 'E-mailadres', 'pexeto' );?>
 			<span class="mandatory">*</span>
 		</label>
 		<input type="text" name="email" class="required email" />
@@ -22,7 +22,7 @@
 
 	<div class="contact-form-textarea contact-input-wrapper">
 		<label class="contact-label">
-			<?php _e( 'Your message', 'pexeto' ); ?>
+			<?php _e( 'Je bericht/vraag', 'pexeto' ); ?>
 			<span class="mandatory">*</span>
 		</label>
 		<textarea name="question" rows="" cols="" class="required"></textarea>
@@ -54,7 +54,7 @@
     <?php } ?>
 
 	<a class="button send-button">
-		<span><?php _e( 'Send', 'pexeto' ); ?></span>
+		<span><?php _e( 'Verstuur', 'pexeto' ); ?></span>
 	</a>
 	<div class="contact-loader"></div>
 	<div class="clear"></div>
