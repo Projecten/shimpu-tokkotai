@@ -52,14 +52,14 @@ if(!function_exists('pexeto_ajax_send_email')){
 				&& $_POST['email'] && isset($_POST['question']) && $_POST['question']){
 				
 				$name=urldecode(stripcslashes($_POST['name']));
-				$subject = "A message from ".$name;
+				$subject = "Een bericht van ".$name;
 				
 				$notes = urldecode(stripcslashes($_POST['question']));
 				$from = $_POST['email'];
 				
 				
-				$message = "From: $from
-				Message: $notes \r\n";
+				$message = "Van: $from
+				Bericht: $notes \r\n";
 				
 				
 				$emailToSend=pexeto_option('email');
