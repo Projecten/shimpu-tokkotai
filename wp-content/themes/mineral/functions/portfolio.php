@@ -52,7 +52,8 @@ if ( !function_exists( 'pexeto_register_portfolio_category' ) ) {
 				'label' => 'Galerij Categorieën',
 				'singular_label' => 'Galerij Categorie',
 				'rewrite' => true,
-				'query_var' => true
+				'query_var' => true,
+                                    'menu_icon' => 'dashicons-format-gallery'
 			) );
 	}
 }
