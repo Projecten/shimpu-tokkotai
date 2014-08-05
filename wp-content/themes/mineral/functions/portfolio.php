@@ -49,8 +49,8 @@ if ( !function_exists( 'pexeto_register_portfolio_category' ) ) {
 		register_taxonomy( PEXETO_PORTFOLIO_TAXONOMY,
 			array( PEXETO_PORTFOLIO_POST_TYPE ),
 			array( 'hierarchical' => true,
-				'label' => 'Portfolio Categories',
-				'singular_label' => 'Portfolio Categories',
+				'label' => 'Galerij Categorieën',
+				'singular_label' => 'Galerij Categorie',
 				'rewrite' => true,
 				'query_var' => true
 			) );
@@ -67,16 +67,16 @@ if ( !function_exists( 'pexeto_register_portfolio_post_type' ) ) {
 
 		//the labels that will be used for the portfolio items
 		$labels = array(
-			'name' => _x( 'Portfolio', 'portfolio name', 'pexeto_admin' ),
-			'singular_name' => _x( 'Portfolio Item', 'portfolio type singular name', 'pexeto_admin' ),
+			'name' => _x( 'Galerij', 'portfolio name', 'pexeto_admin' ),
+			'singular_name' => _x( 'Galerij Item', 'portfolio type singular name', 'pexeto_admin' ),
 			'add_new' => _x( 'Add New', 'portfolio', 'pexeto_admin' ),
 			'add_new_item' => __( 'Add New Item', 'pexeto_admin' ),
 			'edit_item' => __( 'Edit Item', 'pexeto_admin' ),
-			'new_item' => __( 'New Portfolio Item', 'pexeto_admin' ),
+			'new_item' => __( 'New galerij Item', 'pexeto_admin' ),
 			'view_item' => __( 'View Item', 'pexeto_admin' ),
-			'search_items' => __( 'Search Portfolio Items', 'pexeto_admin' ),
-			'not_found' =>  __( 'No portfolio items found', 'pexeto_admin' ),
-			'not_found_in_trash' => __( 'No portfolio items found in Trash', 'pexeto_admin' ),
+			'search_items' => __( 'Search galerij Items', 'pexeto_admin' ),
+			'not_found' =>  __( 'No galerij items found', 'pexeto_admin' ),
+			'not_found_in_trash' => __( 'No galerij items found in Trash', 'pexeto_admin' ),
 			'parent_item_colon' => ''
 		);
 
