@@ -84,7 +84,7 @@ if ( !function_exists( 'pexeto_register_portfolio_post_type' ) ) {
 		register_post_type( PEXETO_PORTFOLIO_POST_TYPE,
 			array( 'labels' => $labels,
 				'public' => true,
-                                   'menu_icon' => 'dashicons-format-gallery'
+                                   'menu_icon' => 'dashicons-format-gallery',
 				'show_ui' => true,
 				'capability_type' => 'post',
 				'hierarchical' => false,
