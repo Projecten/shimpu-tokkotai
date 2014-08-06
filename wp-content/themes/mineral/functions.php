@@ -214,10 +214,11 @@ function remove_my_page_metaboxes() {
                     var commentsdiv = document.getElementById('commentsdiv');
                     var pageparentdiv = document.getElementById('pageparentdiv');
                     var add_new_h2 = document.getElementsByClassName('add-new-h2');
+                    
                     // elementen verwijderen
-                    if ( commentstatusdiv !=null ){ commentstatusdiv.remove(); }
-                    if ( commentsdiv !=null ){ commentsdiv.remove(); }
-                    if ( pageparentdiv !=null ){ pageparentdiv.remove(); }
+                    // if ( commentstatusdiv !=null ){ commentstatusdiv.remove(); }
+                    // if ( commentsdiv !=null ){ commentsdiv.remove(); }
+                    // if ( pageparentdiv !=null ){ pageparentdiv.remove(); }
 
                     if ( add_new_h2 != null ) {
                         for (var i = add_new_h2.length - 1; i >= 0; i--) {
