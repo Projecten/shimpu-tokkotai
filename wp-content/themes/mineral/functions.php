@@ -198,10 +198,6 @@ function remove_my_page_metaboxes() {
                             add_new_h2[i].remove();
                         };
                     }
-
-                    // set title readonly
-                    var title = document.getElementById('title');
-                    title.readOnly = "readonly";
                 }
             </script>
         <?php }
@@ -210,21 +206,21 @@ function remove_my_page_metaboxes() {
             <script type="text/javascript">
                 window.onload = function() {
                     // inladen elementen om te verwijderen
-                    var commentstatusdiv = document.getElementById('commentstatusdiv');
-                    var commentsdiv = document.getElementById('commentsdiv');
-                    var pageparentdiv = document.getElementById('pageparentdiv');
-                    var add_new_h2 = document.getElementsByClassName('add-new-h2');
+                    // var commentstatusdiv = document.getElementById('commentstatusdiv');
+                    // var commentsdiv = document.getElementById('commentsdiv');
+                    // var pageparentdiv = document.getElementById('pageparentdiv');
+                    // var add_new_h2 = document.getElementsByClassName('add-new-h2');
 
                     // elementen verwijderen
                     // if ( commentstatusdiv !=null ){ commentstatusdiv.remove(); }
                     // if ( commentsdiv !=null ){ commentsdiv.remove(); }
                     // if ( pageparentdiv !=null ){ pageparentdiv.remove(); }
 
-                    if ( add_new_h2 != null ) {
-                        for (var i = add_new_h2.length - 1; i >= 0; i--) {
-                            add_new_h2[i].remove();
-                        };
-                    }
+                    // if ( add_new_h2 != null ) {
+                    //     for (var i = add_new_h2.length - 1; i >= 0; i--) {
+                    //         add_new_h2[i].remove();
+                    //     };
+                    // }
 
                     // set title readonly
                     var title = document.getElementById('title');
