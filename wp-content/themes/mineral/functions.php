@@ -234,7 +234,12 @@ function remove_my_page_metaboxes() {
 
 add_action('admin_menu','remove_elements');
 function remove_elements(){
-    
+    if (is_edit_page() && ($type == 'page' || $type == 'none')){
+        ?>
+        <script>
+        console.log("test");
+        </script>
+    }
 }
 
 function is_edit_page($new_edit = null){
