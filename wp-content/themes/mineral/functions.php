@@ -200,8 +200,7 @@ function remove_my_page_metaboxes() {
                     }
 
                     // set title readonly
-                    // var title = document.getElementById('title');
-                    // title.setAttribute('readonly', 'readonly');
+                    var title = document.getElementById('title').readOnly;
                 }
             </script>
         <?php }
@@ -214,7 +213,7 @@ function remove_my_page_metaboxes() {
                     var commentsdiv = document.getElementById('commentsdiv');
                     var pageparentdiv = document.getElementById('pageparentdiv');
                     var add_new_h2 = document.getElementsByClassName('add-new-h2');
-                    
+
                     // elementen verwijderen
                     // if ( commentstatusdiv !=null ){ commentstatusdiv.remove(); }
                     // if ( commentsdiv !=null ){ commentsdiv.remove(); }
