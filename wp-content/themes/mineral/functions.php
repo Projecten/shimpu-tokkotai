@@ -190,7 +190,7 @@ function remove_my_page_metaboxes() {
                     console.log(page_metabox);
                     console.log(pageparentdiv);
                     console.log(add_new_h2);
-                    console.log(contact_page_metabox);
+                    console.log(contact_page_metabox + "test");
 
                     // elementen verwijderen
                     if ( homepage_metabox !=null ){ homepage_metabox.remove(); }
