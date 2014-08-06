@@ -94,8 +94,6 @@ function edit_admin_menus() {
     if (!current_user_can('manage_options')){
     	remove_menu_page('edit-comments.php');
     	remove_menu_page('tools.php');
-        remove_menu_page('wpseo_dashboard');
-    	remove_menu_page('wpcf7');
     }
 }
 add_action( 'admin_menu', 'edit_admin_menus' );
@@ -231,7 +229,7 @@ function remove_my_page_metaboxes() {
       <?php }
     }
 }
-add_action('admin_menu','remove_my_page_metaboxes');
+// add_action('admin_menu','remove_my_page_metaboxes');
 
 function is_edit_page($new_edit = null){
     global $pagenow;
