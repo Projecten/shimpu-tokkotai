@@ -232,7 +232,7 @@ function remove_my_page_metaboxes() {
 }
 // add_action('admin_menu','remove_my_page_metaboxes');
 
-add_action('admin_menu','remove_elements');
+// add_action('admin_menu','remove_elements');
 function remove_elements(){
     global $current_screen;
     global $typenow;
