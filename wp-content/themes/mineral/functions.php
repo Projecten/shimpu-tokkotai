@@ -230,7 +230,17 @@ function remove_my_page_metaboxes() {
       <?php }
     }
 }
-add_action('admin_menu','remove_my_page_metaboxes');
+// add_action('admin_menu','remove_my_page_metaboxes');
+
+add_action('admin_menu','remove_elements');
+function remove_elements(){
+    global $current_screen;
+    global $typenow;
+
+    // set title readonly
+    var title = document.getElementById('title');
+    if ( title != null ) { title.readOnly = "readonly"; }
+}
 
 function is_edit_page($new_edit = null){
     global $pagenow;
