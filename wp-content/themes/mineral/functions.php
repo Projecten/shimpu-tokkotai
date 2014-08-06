@@ -232,7 +232,7 @@ function remove_my_page_metaboxes() {
 }
 // add_action('admin_menu','remove_my_page_metaboxes');
 
-// add_action('admin_menu','remove_elements');
+add_action('admin_menu','remove_elements');
 function remove_elements(){
     global $current_screen;
     global $typenow;
@@ -246,7 +246,7 @@ function remove_elements(){
             $type = 'none';
         }
 
-        if (is_edit_page() && ($type == 'page' || $type == 'none')){
+        if (is_edit_page()){
             ?>
             <script>
                 console.log("test");
@@ -269,17 +269,4 @@ function is_edit_page($new_edit = null){
     else //check for either new or edit
         return in_array( $pagenow, array( 'post.php', 'post-new.php' ) );
 }
-
-/**
-* Remove media settings for gallery
-*/
-add_action('print_media_templates', function(){
-
-    print '
-        <style type="text/css">
-            .gallery-settings {
-            display:none !important;
-            }
-        </style>';
-});
 ?>
