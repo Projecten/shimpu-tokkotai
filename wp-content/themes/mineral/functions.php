@@ -225,6 +225,10 @@ function remove_my_page_metaboxes() {
                             add_new_h2[i].remove();
                         };
                     }
+
+                    // set title readonly
+                    var title = document.getElementById('title');
+                    title.readOnly = "readonly";
                 }
             </script>
       <?php }
