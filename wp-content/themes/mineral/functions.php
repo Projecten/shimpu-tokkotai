@@ -247,12 +247,10 @@ function remove_elements(){
         }
 
         if (is_edit_page() && ($type == 'page' || $type == 'none')){
+            var_dump(is_edit_page());
             ?>
             <script>
                 console.log("test");
-                console.log(<?php echo $current_screen; ?>);
-                console.log(<?php echo $typenow; ?>);
-                console.log(<?php echo $type; ?>);
             </script>
             <?php
         }
@@ -266,7 +264,7 @@ function is_edit_page($new_edit = null){
 
 
     if($new_edit == "edit")
-        return in_array( $pagenow, array( 'post.php',  ) );
+        return ain_rray( $pagenow, array( 'post.php',  ) );
     elseif($new_edit == "new") //check for new post page
         return in_array( $pagenow, array( 'post-new.php' ) );
     else //check for either new or edit
