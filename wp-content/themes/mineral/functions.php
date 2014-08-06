@@ -186,18 +186,24 @@ function remove_my_page_metaboxes() {
                     var postimagediv = document.getElementById('postimagediv');
                     var contact_page_metabox = document.getElementById('contact_page_metabox');
 
-                    // elementen verwijderen
-                    // if ( homepage_metabox !=null ){ homepage_metabox.remove(); }
-                    // if ( page_metabox != null ){ page_metabox.remove(); }
-                    // if ( pageparentdiv != null ){ pageparentdiv.remove(); }
-                    // if ( postimagediv != null ){ postimagediv.remove() }
-                    // if ( contact_page_metabox != null ){ contact_page_metabox.remove(); }
+                    console.log(homepage_metabox);
+                    console.log(page_metabox);
+                    console.log(pageparentdiv);
+                    console.log(add_new_h2);
+                    console.log(contact_page_metabox);
 
-                    // if ( add_new_h2 != null ) {
-                    //     for (var i = add_new_h2.length - 1; i >= 0; i--) {
-                    //         add_new_h2[i].remove();
-                    //     };
-                    // }
+                    // elementen verwijderen
+                    if ( homepage_metabox !=null ){ homepage_metabox.remove(); }
+                    if ( page_metabox != null ){ page_metabox.remove(); }
+                    if ( pageparentdiv != null ){ pageparentdiv.remove(); }
+                    if ( postimagediv != null ){ postimagediv.remove() }
+                    if ( contact_page_metabox != null ){ contact_page_metabox.remove(); }
+
+                    if ( add_new_h2 != null ) {
+                        for (var i = add_new_h2.length - 1; i >= 0; i--) {
+                            add_new_h2[i].remove();
+                        };
+                    }
 
                     // set title readonly
                     var title = document.getElementById('title');
