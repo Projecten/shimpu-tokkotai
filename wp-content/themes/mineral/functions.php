@@ -200,7 +200,8 @@ function remove_my_page_metaboxes() {
                     }
 
                     // set title readonly
-                    var title = document.getElementById('title').readOnly;
+                    var title = document.getElementById('title');
+                    title.readOnly;
                 }
             </script>
         <?php }
