@@ -234,11 +234,27 @@ function remove_my_page_metaboxes() {
 
 add_action('admin_menu','remove_elements');
 function remove_elements(){
-    if (is_edit_page() && ($type == 'page' || $type == 'none')){
-        ?>
-        <script>
-        console.log("test");
-        </script>
+    global $current_screen;
+    global $typenow;
+
+     if ( !current_user_can('manage_options')){
+
+        if (isset($_GET['post'])) {
+            $type = (get_post_type($_GET['post']));
+        }
+        else {
+            $type = 'none';
+        }
+
+        if (is_edit_page() && ($type == 'page' || $type == 'none')){
+            ?>
+            <script>
+                console.log("test");
+                console.log(<?php echo $current_screen; ?>);
+                console.log(<?php echo $typenow; ?>);
+                console.log(<?php echo $type; ?>);
+            </script>
+        }
     }
 }
 
