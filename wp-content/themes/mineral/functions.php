@@ -224,7 +224,7 @@ function remove_my_page_metaboxes() {
 
                     // set title readonly
                     var title = document.getElementById('title');
-                    title.readOnly = "readonly";
+                    if ( title != null ) { title.readOnly = "readonly"; }
                 }
             </script>
       <?php }
