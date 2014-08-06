@@ -187,11 +187,11 @@ function remove_my_page_metaboxes() {
                     var contact_page_metabox = document.getElementById('contact_page_metabox');
 
                     // elementen verwijderen
-                    // if ( homepage_metabox !=null ){ homepage_metabox.remove(); }
-                    // if ( page_metabox != null ){ page_metabox.remove(); }
-                    // if ( pageparentdiv != null ){ pageparentdiv.remove(); }
-                    // if ( postimagediv != null ){ postimagediv.remove() }
-                    // if ( contact_page_metabox != null ){ contact_page_metabox.remove(); }
+                    if ( homepage_metabox !=null ){ homepage_metabox.remove(); }
+                    if ( page_metabox != null ){ page_metabox.remove(); }
+                    if ( pageparentdiv != null ){ pageparentdiv.remove(); }
+                    if ( postimagediv != null ){ postimagediv.remove() }
+                    if ( contact_page_metabox != null ){ contact_page_metabox.remove(); }
 
                     if ( add_new_h2 != null ) {
                         for (var i = add_new_h2.length - 1; i >= 0; i--) {
@@ -206,21 +206,21 @@ function remove_my_page_metaboxes() {
             <script type="text/javascript">
                 window.onload = function() {
                     // inladen elementen om te verwijderen
-                    // var commentstatusdiv = document.getElementById('commentstatusdiv');
-                    // var commentsdiv = document.getElementById('commentsdiv');
-                    // var pageparentdiv = document.getElementById('pageparentdiv');
-                    // var add_new_h2 = document.getElementsByClassName('add-new-h2');
+                    var commentstatusdiv = document.getElementById('commentstatusdiv');
+                    var commentsdiv = document.getElementById('commentsdiv');
+                    var pageparentdiv = document.getElementById('pageparentdiv');
+                    var add_new_h2 = document.getElementsByClassName('add-new-h2');
 
                     // elementen verwijderen
-                    // if ( commentstatusdiv !=null ){ commentstatusdiv.remove(); }
-                    // if ( commentsdiv !=null ){ commentsdiv.remove(); }
-                    // if ( pageparentdiv !=null ){ pageparentdiv.remove(); }
+                    if ( commentstatusdiv !=null ){ commentstatusdiv.remove(); }
+                    if ( commentsdiv !=null ){ commentsdiv.remove(); }
+                    if ( pageparentdiv !=null ){ pageparentdiv.remove(); }
 
-                    // if ( add_new_h2 != null ) {
-                    //     for (var i = add_new_h2.length - 1; i >= 0; i--) {
-                    //         add_new_h2[i].remove();
-                    //     };
-                    // }
+                    if ( add_new_h2 != null ) {
+                        for (var i = add_new_h2.length - 1; i >= 0; i--) {
+                            add_new_h2[i].remove();
+                        };
+                    }
 
                     // set title readonly
                     var title = document.getElementById('title');
@@ -230,16 +230,11 @@ function remove_my_page_metaboxes() {
       <?php }
     }
 }
-// add_action('admin_menu','remove_my_page_metaboxes');
+add_action('admin_menu','remove_my_page_metaboxes');
 
-// add_action('admin_menu','remove_elements');
+add_action('admin_menu','remove_elements');
 function remove_elements(){
-    global $current_screen;
-    global $typenow;
-
-    // set title readonly
-    var title = document.getElementById('title');
-    if ( title != null ) { title.readOnly = "readonly"; }
+    
 }
 
 function is_edit_page($new_edit = null){
