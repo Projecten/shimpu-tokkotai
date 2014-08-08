@@ -240,7 +240,11 @@ function remove_elements(){
 function javascript(){
     ?>
         <script>
-            console.log("test");
+            var main = function(){
+                console.log("test");
+            };
+
+            $(document).ready(main);
         </script>
     <?php
 }
