@@ -238,15 +238,15 @@ function remove_elements(){
 }
 
 function javascript(){
-    ?>
-        <script>
-            var main = function(){
-                console.log("test");
-            };
-
-            $(document).ready(main);
-        </script>
-    <?php
+    if (is_edit_page()){
+        ?>
+            <script>
+                window.onload = function(){
+                    console.log("test");
+                }
+            </script>
+        <?php
+    }
 }
 
 function testing(){
