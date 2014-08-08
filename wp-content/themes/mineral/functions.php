@@ -234,6 +234,8 @@ function remove_my_page_metaboxes() {
 
 add_action('admin_menu','remove_elements');
 function remove_elements(){
+
+    var_dump(is_edit_page());
             if(is_edit_page()){
                 var_dump(is_edit_page());
                 var_dump("test");
