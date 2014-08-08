@@ -234,13 +234,7 @@ function remove_my_page_metaboxes() {
 
 add_action('admin_menu','remove_elements');
 function remove_elements(){
-            add_action('wp_enqueue_scripts', wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js');
-}
-
-function javascript(){
-    if (is_edit_page()){
-        wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js');
-    }
+            
 }
 
 function testing(){
