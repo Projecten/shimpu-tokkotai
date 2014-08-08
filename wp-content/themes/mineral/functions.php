@@ -237,7 +237,7 @@ function remove_elements(){
     // global $current_screen;
     // global $typenow;
 
-     if ( !current_user_can('manage_options')){
+     // if ( !current_user_can('manage_options')){
 
         // if (isset($_GET['post'])) {
         //     $type = (get_post_type($_GET['post']));
@@ -254,7 +254,7 @@ function remove_elements(){
             </script>
             <?php
         }
-    }
+    // }
 }
 
 function is_edit_page($new_edit = null){
