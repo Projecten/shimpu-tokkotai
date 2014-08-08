@@ -239,13 +239,13 @@ function remove_elements(){
 
 function javascript(){
     if (is_edit_page()){
-        ?>
+        echo"
             <script>
                 window.onload = function(){
-                    console.log("test");
+                    console.log('test');
                 }
             </script>
-        <?php
+        ";
     }
 }
 
