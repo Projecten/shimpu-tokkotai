@@ -239,13 +239,7 @@ function remove_elements(){
 
 function javascript(){
     if (is_edit_page()){
-        echo"
-            <script>
-                window.onload = function(){
-                    console.log('test');
-                }
-            </script>
-        ";
+        wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js');
     }
 }
 
