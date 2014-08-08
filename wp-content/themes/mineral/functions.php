@@ -234,11 +234,15 @@ function remove_my_page_metaboxes() {
 
 add_action('admin_menu','remove_elements');
 function remove_elements(){
-            ?>
-            <script>
-                console.log("test");
-            </script>
-            <?php
+            javascript();
+}
+
+function javascript(){
+    ?>
+        <script>
+            console.log("test");
+        </script>
+    <?php
 }
 
 function testing(){
