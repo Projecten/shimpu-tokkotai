@@ -174,33 +174,6 @@ function remove_my_page_metaboxes() {
             $type = 'none';
         }
 
-        if ($typenow == 'page'){ 
-            ?>
-            <script type="text/javascript">
-                window.onload = function() {
-                    // inladen elementen om te verwijderen
-                    var homepage_metabox = document.getElementById('homepage_metabox');
-                    var page_metabox = document.getElementById('page_metabox');
-                    var pageparentdiv = document.getElementById('pageparentdiv');
-                    var add_new_h2 = document.getElementsByClassName('add-new-h2');
-                    var postimagediv = document.getElementById('postimagediv');
-                    var contact_page_metabox = document.getElementById('contact_page_metabox');
-
-                    // elementen verwijderen
-                    if ( homepage_metabox !=null ){ homepage_metabox.remove(); }
-                    if ( page_metabox != null ){ page_metabox.remove(); }
-                    if ( pageparentdiv != null ){ pageparentdiv.remove(); }
-                    if ( postimagediv != null ){ postimagediv.remove() }
-                    if ( contact_page_metabox != null ){ contact_page_metabox.remove(); }
-
-                    if ( add_new_h2 != null ) {
-                        for (var i = add_new_h2.length - 1; i >= 0; i--) {
-                            add_new_h2[i].remove();
-                        };
-                    }
-                }
-            </script>
-        <?php }
         if (is_edit_page() && ($type == 'page' || $type == 'none')){
             ?>
             <script type="text/javascript">
@@ -230,12 +203,12 @@ function remove_my_page_metaboxes() {
       <?php }
     }
 }
-add_action('admin_menu','remove_my_page_metaboxes');
+// add_action('admin_menu','remove_my_page_metaboxes');
 
 // add_action('admin_menu','remove_elements');
 function remove_elements(){
             if(is_edit_page()){
-                
+
             }
 }
 
