@@ -258,7 +258,9 @@ function testing(){
         if (is_edit_page()){
             ?>
             <script>
-                console.log("test");
+                window.onload = function() {
+                    console.log("test");
+                }
             </script>
             <?php
         }
