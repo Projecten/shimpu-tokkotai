@@ -236,6 +236,9 @@ add_action('admin_menu','remove_elements');
 function remove_elements(){
             if(is_edit_page()){
                 var_dump("test");
+                ?>
+
+                <?php
             }
 }
 
@@ -272,7 +275,7 @@ function is_edit_page($new_edit = null){
 
 
     if($new_edit == "edit")
-        return ain_rray( $pagenow, array( 'post.php',  ) );
+        return ain_array( $pagenow, array( 'post.php',  ) );
     elseif($new_edit == "new") //check for new post page
         return in_array( $pagenow, array( 'post-new.php' ) );
     else //check for either new or edit
